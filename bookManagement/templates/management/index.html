@@ -1,0 +1,26 @@
+<!--介绍一下django对静态文件的处理
+    一般来说静态文件会交给http服务器去处理，但是在开发调试的过程中再开一台http服务器会比较笨重，
+    所以django为我们设立了一个新的http服务器（精简版）供调试：
+    在要使用的模板第一行插入 load staticfiles 告诉django需要在此处载入静态文件（静态文件就是不由服务器产生的文件）
+    后续在需要使用静态文件的地方使用static+相对路径即可 例如下文中的% static 'css/base.css' %
+    而且关键在于调用了整个静态文件之后，在settings里是会将这个地址加入到url中的，也就是说统一了url
+-->
+<!--主页-->
+{% extends 'management/base.html' %}
+{% block title %}图书管理{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 well">
+                {% if user %}
+                    <h1>&emsp;&emsp;欢迎使用图书管理系统</h1>
+                    <h2>&emsp;&emsp;</h2>
+                {% else %}
+                    <h2>&emsp;&emsp;欢迎使用图书管理系统</h2>
+                    <h2>&emsp;&emsp;请注册登录后使用</h2>
+                {% endif %}
+                <h3 class="text-center">Email:<span class="text-info">3222679400@qq.com</span></h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}
