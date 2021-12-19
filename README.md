@@ -302,7 +302,7 @@ def index(request):
 
 ​	**MVT模型：**
 
-<img src="C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20211129135915390.png" alt="image-20211129135915390" style="zoom:50%;" />
+![image-20211129135915390.png](https://s2.loli.net/2021/12/19/rofePAOT8IZsUbM.png)
 
 ​	如果像自己写一个的，我建议先认真读一下板块《软件工程设计流程》、《产品设计的确定》、《设计排期》。想要做出这样的系统来，这三步是非常重要的，它决定了你到时候写不写得出来和写出来能不能用。
 
